@@ -27,6 +27,55 @@ Version: 1.1.0
   ---box-shadow: 0px 6px 25px rgba(0, 0, 0, 0.05);
 }
 
+.submenu {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px 20px; /* Less vertical (10px) and horizontal (20px) spacing */
+  list-style: none;
+  margin: 0;
+  padding:10px;
+  width: 600px;
+  max-width: 600px;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background-color: white;
+  z-index: 999;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Reduce spacing inside each list item */
+.submenu li {
+  margin: 0;
+  padding: 0;
+}
+
+/* Style links tightly with no underline or extra padding */
+.submenu li a {
+  display: block;
+  text-decoration: none; /* removes underline */
+  color: #000;
+  font-size: 14px;
+  line-height: 1.2;
+  padding: 4px 0;
+  border: none;
+}
+
+/* Optional hover effect */
+.submenu li a:hover {
+  color: #eac229;
+  background-color: #f5f5f5;
+}
+
+
+@media (min-width: 992px) {
+  .submenu {
+    width: 100vw;
+    left: 0;
+  }
+}
+
+
 .theme-btn {
   background-color: #eac229;
   color: var(--white);
