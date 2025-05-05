@@ -156,10 +156,10 @@
                                 </a>
                             </div>
                             <div class="social-icon d-flex align-items-center">
-                                <a href="#"><i class="fab fa-facebook fa-lg"></i></a>
-                                <a href="#"><i class="fab fa-whatsapp"></i></a>
-                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="https://www.facebook.com/Aaryanbuilders?rdid=Wg761dsfB5kbFQfl&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1B1GGrYbMd%2F#"><i class="fab fa-facebook fa-lg"></i></a>
+                                <a  href="https://wa.me/6369063601" ><i class="fab fa-whatsapp"></i></a>
+                        
+                                <a href="https://www.instagram.com/rn_builders3/?utm_source=qr&igsh=MXJyOWpzYTlteDJ0dA%3D%3D#"><i class="fab fa-instagram"></i></a>
                             </div>
                         </div>
                     </div>
@@ -598,27 +598,26 @@
                                 </div>
                                 <div class="col-lg-6 wow fadeInUp" data-wow-delay=".8s">
                                     <div class="form-clt">
-                                        <div class="nice-select" tabindex="0">
-                                           <span class="current">
-                                             Choose Services
-                                           </span>
-                                            <ul class="list">
-                                                <li data-value="1" class="option selected focus">
-                                                    Default sorting
-                                                </li>
-                                                <li data-value="1" class="option">
-                                                    Sort by popularity
-                                                </li>
-                                                <li data-value="1" class="option">
-                                                    Sort by average rating
-                                                </li>
-                                                <li data-value="1" class="option">
-                                                    Sort by latest
-                                                </li>
-                                            </ul>
-                                        </div>
-                                     </div>
-                                </div>
+                                      <select name="service" required>
+                                        <option value="" disabled selected>Choose Services</option>
+                                        <option>General Contracting</option>
+                                        <option>Design and Build Services</option>
+                                        <option>Construction Management</option>
+                                        <option>Pre-Construction Services</option>
+                                        <option>Renovation and Remodeling</option>
+                                        <option>Residential Construction</option>
+                                        <option>Commercial Construction</option>
+                                        <option>Industrial Construction</option>
+                                        <option>Green Building and Sustainable Construction</option>
+                                        <option>Interior Fit-Outs</option>
+                                        <option>Concrete and Foundation Work</option>
+                                        <option>Steel Structure Construction</option>
+                                        <option>MEP Services</option>
+                                        <option>Project Consultancy and Advisory</option>
+                                      </select>
+                                    </div>
+                                  </div>
+                                  
                                 <div class="col-lg-12 wow fadeInUp" data-wow-delay=".9s">
                                     <div class="form-clt">
                                         <textarea name="message" id="message" placeholder="Message here.."></textarea>
@@ -690,7 +689,7 @@
                                     <div class="social-icon d-flex align-items-center">
                                         <a href="https://www.facebook.com/Aaryanbuilders?rdid=Wg761dsfB5kbFQfl&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1B1GGrYbMd%2F#"><i class="fab fa-facebook fa-lg"></i></a>
                                         <a  href="https://wa.me/6369063601" ><i class="fab fa-whatsapp"></i></a>
-                                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                
                                         <a href="https://www.instagram.com/rn_builders3/?utm_source=qr&igsh=MXJyOWpzYTlteDJ0dA%3D%3D#"><i class="fab fa-instagram"></i></a>
                                     </div>
                                 </div>
@@ -869,5 +868,29 @@
         <script src="assets/js/gsap/ScrollSmoother.min.js"></script>
         <!--<< Main.js >>-->
         <script src="assets/js/main.js"></script>
+
+        <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+        <script>
+        (function() {
+            emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your actual Public Key
+        })();
+        </script>
+
+        <script>
+            document.getElementById("contact-form").addEventListener("submit", function(e) {
+            e.preventDefault();
+            
+            emailjs.sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", this)
+                .then(function(response) {
+                alert("Appointment request sent successfully!");
+                document.getElementById("contact-form").reset();
+                }, function(error) {
+                alert("Failed to send message. Please try again.");
+                console.error("EmailJS Error:", error);
+                });
+            });
+        </script>
+  
+
     </body>
 </html>
