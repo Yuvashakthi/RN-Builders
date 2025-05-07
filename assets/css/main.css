@@ -26,6 +26,17 @@ Version: 1.1.0
   ---color-gradient-2: linear-gradient(to left, #ff8662, #fc9860, #ff7269, #fd4a81, #ff5e73);
   ---box-shadow: 0px 6px 25px rgba(0, 0, 0, 0.05);
 }
+@media (max-width: 1024px) {
+  .testimonial-image {
+    width: 100%;
+    height: 250px; /* Adjust as needed */
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 20px;
+  }
+}
+
+
 .nice-select .list {
   max-height: 250px !important;  /* limit visible height */
   overflow-y: auto !important;   /* enable scroll */
@@ -6872,6 +6883,8 @@ input.main-search-input::placeholder {
     display: none;
   }
 }
+
+
 .testimonial-wrapper-2 .array-button .array-prev {
   background-color: transparent;
   color: #eac229 !important;
@@ -9261,3 +9274,48 @@ p.sticky-label {
   width: 100%;
   height: 100%;
 }/*# sourceMappingURL=main.css.map */
+
+@media screen and (max-width: 414px) {
+
+  .service-box-items{
+    width: 370px;
+    margin-left:10px;
+  }
+}
+@media screen and (width: 375px) {
+
+  .service-box-items{
+    width: 330px;
+    margin-left:10px;
+  }
+}
+
+@media screen and (width: 390px) {
+
+  .service-box-items{
+    width: 350px;
+    margin-left:10px;
+  }
+}
+@media screen and (width: 430px) {
+
+  .service-box-items{
+    width: 390px;
+    margin-left:10px;
+  }
+}
+@media screen and (width: 360px) {
+
+  .service-box-items{
+    width: 320px;
+    margin-left:10px;
+  }
+}
+
+@media screen and (width: 768px) {
+
+  .service-box-items{
+    width: 560px;
+    margin-left:10px;
+  }
+}
