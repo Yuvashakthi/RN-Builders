@@ -380,36 +380,36 @@
                                         <h6 class="wow fadeInUp">Contact Us</h6>
                                         <h2 class="splt-txt wow" data-splitting>Get In Touch</h2>
                                     </div>
-                                    <form action="contact.php" id="contact-form" method="POST" class="contact-form-items mt-4 mt-md-0">
+                                    <form action="" id="contact-form" method="POST" class="contact-form-items mt-4 mt-md-0">
                                         <div class="row g-4">
                                             <div class="col-lg-6 wow fadeInUp">
                                                 <div class="form-clt">
-                                                    <input type="text" name="name" id="name" placeholder="Your Name">
+                                                    <input type="text" name="name" placeholder="Your Name" />
                                                 </div>
                                             </div>
                                             <div class="col-lg-6 wow fadeInUp">
                                                 <div class="form-clt">
-                                                    <input type="text" name="email" id="email" placeholder="Your Email">
+                                                    <input type="text" name="email" placeholder="Your Email" />
                                                 </div>
                                             </div>
                                             <div class="col-lg-6 wow fadeInUp">
                                                 <div class="form-clt">
-                                                    <input type="text" name="number" id="number" placeholder="Phone Number">
+                                                    <input type="text" name="number" placeholder="Phone Number" />
                                                 </div>
                                             </div>
                                             <div class="col-lg-6 wow fadeInUp">
                                                 <div class="form-clt">
-                                                    <input type="text" name="subject" id="subject" placeholder="Subject">
+                                                    <input type="text" name="subject" placeholder="Subject" />
                                                 </div>
                                             </div>
                                             <div class="col-lg-12 wow fadeInUp">
                                                 <div class="form-clt">
-                                                    <textarea name="message" id="message" placeholder="Message here.."></textarea>
+                                                    <textarea name="message" placeholder="Message here.."></textarea>
                                                 </div>
                                             </div>
                                             <div class="col-lg-7 wow fadeInUp">
                                                 <button type="submit" class="theme-btn padding-style">
-                                                    submit now <i class="fas fa-long-arrow-right"></i>
+                                                    Submit Now <i class="fas fa-long-arrow-right"></i>
                                                 </button>
                                             </div>
                                         </div>
@@ -748,6 +748,28 @@
     <script src="assets/js/ajax-mail.js"></script>
     <!--<< Main.js >>-->
      <script src="assets/js/main.js"></script>
+
+     <!-- EmailJS SDK -->
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+    (function(){
+        emailjs.init("crwjfVXBYRV8fXd0n"); // Replace with your actual public key
+    })();
+    </script>
+    <script>
+        document.getElementById("contact-form").addEventListener("submit", function(e) {
+          e.preventDefault();
+      
+          emailjs.sendForm("service_50yozor", "template_4rcv3ip", this)
+            .then(function(response) {
+              alert("Message sent successfully!");
+              document.getElementById("contact-form").reset(); // clear form
+            }, function(error) {
+              alert("Failed to send message. Error: " + JSON.stringify(error));
+            });
+        });
+      </script>
+      
     </body>
 </html>
 
