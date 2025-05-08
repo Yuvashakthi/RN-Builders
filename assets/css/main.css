@@ -9317,5 +9317,34 @@ p.sticky-label {
   .service-box-items{
     width: 560px;
     margin-left:10px;
+    flex-direction:column;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .service-section-2 .row {
+      flex-direction: column !important;
+      width: 100% !important;
+      align-items: center;
+      margin-left:-120px;
+  }
+
+  .service-section-2 .col-xl-4,
+  .service-section-2 .col-lg-3,
+  .service-section-2 .col-md-6 {
+      max-width: 100% !important;
+      flex: 0 0 100% !important;
+  }
+
+  .service-box-items {
+      margin-bottom: 30px;
+  }
+}
+@media screen and (width: 820px) {
+
+  .service-box-items{
+    width: 700px;
+    margin-left:10px;
+    flex-direction:column;
   }
 }
