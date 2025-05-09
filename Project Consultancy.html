@@ -154,7 +154,7 @@
                             </div>
                             <div class="social-icon d-flex align-items-center">
                                 <a href="https://www.facebook.com/Aaryanbuilders?rdid=Wg761dsfB5kbFQfl&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1B1GGrYbMd%2F#"><i class="fab fa-facebook fa-lg"></i></a>
-                                <a  href="https://wa.me/6369063601" ><i class="fab fa-whatsapp"></i></a>
+                                <a  href="https://wa.me/7708993259" ><i class="fab fa-whatsapp"></i></a>
                         
                                 <a href="https://www.instagram.com/rn_builders3/?utm_source=qr&igsh=MXJyOWpzYTlteDJ0dA%3D%3D#"><i class="fab fa-instagram"></i></a>
                             </div>
@@ -402,17 +402,30 @@
                                     </div>
                                     <div class="single-sidebar-widget mb-0">
                                         <div class="download-service-doc">
-                                            
+                                          
                                     
-                                            <!-- Download link -->
-                                            <a href="document/company details.pdf" 
-                                               download="company-details.pdf" 
-                                               class="theme-btn text-center w-100 mb-3">
-                                               <i class="industrio-icon-emails-interface-download-symbol"></i> Download Brochure
+                                            <a href="document/company details.pdf" id="downloadBtn" class="theme-btn text-center w-100 mb-3" >
+                                            <i class="industrio-icon-emails-interface-download-symbol"></i> Download Brochure
                                             </a>
+                                            
+                                            <!-- Popup Modal Form -->
+                                            <div id="popupForm" class="popup-overlay">
+                                             <div class="popup-content">
+                                                 <span class="close-btn" id="closePopup">&times;</span>
+                                                 <h4>Enter Your Details</h4>
+                                                 <form id="brochureForm">
+                                                     <input type="text" name="name" placeholder="Your Name" required>
+                                                     <input type="email" name="email" placeholder="Your Email" required>
+                                                     <input type="text" name="number" id="number" placeholder="Phone Number" required>                                                   
+                                                     <button type="submit" class="theme-btn">Submit & Download</button>
+                                                 </form>
+                                             </div>
+                                            </div>
+                                            
                                         </div>
                                     </div>
-                                    
+                                    <!-- Trigger button -->
+
                                 </div>
                             </div>
                         </div>
@@ -473,7 +486,7 @@
                                     </div>
                                     <div class="social-icon d-flex align-items-center">
                                         <a href="https://www.facebook.com/Aaryanbuilders?rdid=Wg761dsfB5kbFQfl&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1B1GGrYbMd%2F#"><i class="fab fa-facebook fa-lg"></i></a>
-                                        <a  href="https://wa.me/6369063601" ><i class="fab fa-whatsapp"></i></a>
+                                        <a  href="https://wa.me/7708993259" ><i class="fab fa-whatsapp"></i></a>
                                 
                                         <a href="https://www.instagram.com/rn_builders3/?utm_source=qr&igsh=MXJyOWpzYTlteDJ0dA%3D%3D#"><i class="fab fa-instagram"></i></a>
                                     </div>
@@ -648,5 +661,32 @@
         <script src="assets/js/gsap/ScrollSmoother.min.js"></script>
         <!--<< Main.js >>-->
         <script src="assets/js/main.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+        <script>
+            emailjs.init('crwjfVXBYRV8fXd0n'); // Replace with your actual user ID from EmailJS
+            </script>
+            <script>
+                document.getElementById("downloadBtn").addEventListener("click", function (e) {
+                    e.preventDefault();
+                    document.getElementById("popupForm").style.display = "flex";
+                });
+                
+                document.getElementById("closePopup").addEventListener("click", function () {
+                    document.getElementById("popupForm").style.display = "none";
+                });
+                
+                document.getElementById("brochureForm").addEventListener("submit", function (e) {
+                    e.preventDefault();
+                
+                    emailjs.sendForm('service_d0286uv', 'template_wbz04zv', this)
+                        .then(function () {
+                            alert("Form submitted successfully!");
+                            document.getElementById("popupForm").style.display = "none";
+                            window.location.href = 'document/company details.pdf'; // Trigger download
+                        }, function (error) {
+                            alert("Failed to send. Please try again.");
+                        });
+                });
+                </script>
     </body>
 </html>
