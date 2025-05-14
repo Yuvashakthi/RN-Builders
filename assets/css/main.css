@@ -10888,20 +10888,770 @@ p.sticky-label {
 }
 
 @media (max-width: 768px) {
-  .gallery-flex {
-      flex-wrap: wrap;
-      gap: 20px; /* Adds spacing between items */
+  .team-card-items.style-2 {
+      margin-bottom: 30px;
   }
 
-  .gallery-flex .gallery-item {
-      flex: 1 1 100%;
-      margin-bottom: 20px; /* Ensures spacing at bottom */
-  }
-
-  .gallery-flex img {
+  .team-image img {
       width: 100%;
-      height: auto;
-      display: block;
-      border-radius: 8px;
+      
+      object-fit: cover;
+      border-radius: 10px;
+  }
+
+  .col-md-6, .col-lg-4, .col-xl-3 {
+      flex: 0 0 100%;
+      max-width: 100%;
+  }
+
+  .team-section .row {
+      gap: 20px 0; /* Adjust vertical spacing between rows */
   }
 }
+
+@media (max-width: 820px) {
+  .team-card-items.style-2 {
+      margin-bottom: 30px;
+  }
+
+  .team-image img {
+      width: 100%;
+      
+      object-fit: cover;
+      border-radius: 10px;
+  }
+
+  .col-md-6, .col-lg-4, .col-xl-3 {
+      flex: 0 0 100%;
+      max-width: 100%;
+  }
+
+  .team-section .row {
+      gap: 20px 0; /* Adjust vertical spacing between rows */
+  }
+}
+
+
+
+@media (max-width: 540px) {
+  .team-card-items.style-2 {
+      margin-bottom: 30px;
+  }
+
+  .team-image img {
+      width: 100%;
+      
+      object-fit: cover;
+      border-radius: 10px;
+  }
+
+  .col-md-6, .col-lg-4, .col-xl-3 {
+      flex: 0 0 100%;
+      max-width: 100%;
+  }
+
+  .team-section .row {
+      gap: 20px 0; /* Adjust vertical spacing between rows */
+  }
+}
+
+
+@media (max-width:1024px) {
+  .team-section .team-card-items {
+      margin-bottom: 20px;
+      text-align: center;
+  }
+
+  .team-section .team-image img {
+     
+      width: 100% !important;
+      object-fit: cover;
+      
+  }
+
+  .team-section .col-md-6,
+  .team-section .col-lg-4,
+  .team-section .col-xl-3 {
+      flex: 0 0 100%;
+      max-width: 100%;
+  }
+
+  .team-section .row {
+      margin: 0;
+  }
+}
+
+@media (max-width: 375px) {
+  .contact-section-4 {
+      padding: 40px 15px !important; /* reduce padding */
+  }
+
+  .contact-content {
+      text-align: center;
+  }
+
+  .contact-form-items .row {
+      gap: 15px;
+  }
+
+ 
+  .form-clt input,
+  .form-clt textarea {
+      width: 100%;
+      padding: 10px 12px;
+      font-size: 14px;
+  }
+
+  .form-clt textarea {
+      height: 120px;
+      resize: vertical;
+  }
+
+
+}
+
+@media (max-width: 414px) {
+
+
+  .contact-content {
+      text-align: center;
+      border:none;
+  }
+
+}
+
+@media (max-width: 430px) {
+
+
+  .contact-content {
+      text-align: center;
+      border:none;
+  }
+
+}
+@media (max-width: 768px) {
+
+
+  .contact-content {
+      text-align: center;
+      border:none;
+  }
+
+}
+@media (max-width: 820px) {
+
+
+  .contact-content {
+      text-align: center;
+      border:none;
+  }
+
+}
+@media (max-width: 912px) {
+
+
+  .contact-content {
+      text-align: center;
+      border:none;
+  }
+
+}
+
+@media screen and (width: 375px) {
+  /* Adjust list inside service details */
+  .service-details-items .d-list {
+      padding-left: 1rem;
+      margin-top: 1rem;
+  }
+  .details-content p{
+    font-size: 14px;
+    margin: 10px;
+  }
+
+  .service-details-items .d-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+      font-size: 14px;
+      line-height: 1.4;
+      margin-bottom: 0.75rem;
+  }
+
+  .service-details-items .d-list li i {
+      margin-top: 4px;
+      font-size: 14px;
+      min-width: 16px;
+  }
+
+  /* Fix long texts in sidebar */
+  .main-sidebar .widget-categories ul li a {
+      font-size: 14px;
+      line-height: 1.4;
+      display: inline-block;
+      word-break: break-word;
+  }
+
+  /* Remove center tags in sidebar (fix spacing properly) */
+  .main-sidebar .widget-categories ul li a center {
+      display: block;
+      text-align: left;
+      margin: 0;
+  }
+}
+
+
+@media screen and (width: 414px) {
+  /* Adjust list inside service details */
+  .service-details-items .d-list {
+      padding-left: 1rem;
+      margin-top: 1rem;
+  }
+  .details-content p{
+    font-size: 14px;
+    margin: 10px;
+  }
+
+  .service-details-items .d-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+      font-size: 14px;
+      line-height: 1.4;
+      margin-bottom: 0.75rem;
+  }
+
+  .service-details-items .d-list li i {
+      margin-top: 4px;
+      font-size: 14px;
+      min-width: 16px;
+  }
+
+  /* Fix long texts in sidebar */
+  .main-sidebar .widget-categories ul li a {
+      font-size: 14px;
+      line-height: 1.4;
+      display: inline-block;
+      word-break: break-word;
+  }
+
+  /* Remove center tags in sidebar (fix spacing properly) */
+  .main-sidebar .widget-categories ul li a center {
+      display: block;
+      text-align: left;
+      margin: 0;
+  }
+}
+
+
+@media screen and (width: 430px) {
+  /* Adjust list inside service details */
+  .service-details-items .d-list {
+      padding-left: 1rem;
+      margin-top: 1rem;
+  }
+  .details-content p{
+    font-size: 14px;
+    margin: 10px;
+  }
+
+  .service-details-items .d-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+      font-size: 14px;
+      line-height: 1.4;
+      margin-bottom: 0.75rem;
+  }
+
+  .service-details-items .d-list li i {
+      margin-top: 4px;
+      font-size: 14px;
+      min-width: 16px;
+  }
+
+  /* Fix long texts in sidebar */
+  .main-sidebar .widget-categories ul li a {
+      font-size: 14px;
+      line-height: 1.4;
+      display: inline-block;
+      word-break: break-word;
+  }
+
+  /* Remove center tags in sidebar (fix spacing properly) */
+  .main-sidebar .widget-categories ul li a center {
+      display: block;
+      text-align: left;
+      margin: 0;
+  }
+}
+
+
+@media screen and (width: 768px) {
+  /* Adjust list inside service details */
+  .service-details-items .d-list {
+      padding-left: 1rem;
+      margin-top: 1rem;
+  }
+  .details-content p{
+    font-size: 14px;
+    margin: 10px;
+  }
+
+  .service-details-items .d-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+      font-size: 14px;
+      line-height: 1.4;
+      margin-bottom: 0.75rem;
+  }
+
+  .service-details-items .d-list li i {
+      margin-top: 4px;
+      font-size: 14px;
+      min-width: 16px;
+  }
+
+  /* Fix long texts in sidebar */
+  .main-sidebar .widget-categories ul li a {
+      font-size: 14px;
+      line-height: 1.4;
+      display: inline-block;
+      word-break: break-word;
+  }
+
+  /* Remove center tags in sidebar (fix spacing properly) */
+  .main-sidebar .widget-categories ul li a center {
+      display: block;
+      text-align: left;
+      margin: 0;
+  }
+}
+
+
+@media screen and (width: 390px) {
+  /* Adjust list inside service details */
+  .service-details-items .d-list {
+      padding-left: 1rem;
+      margin-top: 1rem;
+  }
+  .details-content p{
+    font-size: 14px;
+    margin: 10px;
+  }
+
+  .service-details-items .d-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+      font-size: 14px;
+      line-height: 1.4;
+      margin-bottom: 0.75rem;
+  }
+
+  .service-details-items .d-list li i {
+      margin-top: 4px;
+      font-size: 14px;
+      min-width: 16px;
+  }
+
+  /* Fix long texts in sidebar */
+  .main-sidebar .widget-categories ul li a {
+      font-size: 14px;
+      line-height: 1.4;
+      display: inline-block;
+      word-break: break-word;
+  }
+
+  /* Remove center tags in sidebar (fix spacing properly) */
+  .main-sidebar .widget-categories ul li a center {
+      display: block;
+      text-align: left;
+      margin: 0;
+  }
+}
+
+@media screen and (width: 412px) {
+  /* Adjust list inside service details */
+  .service-details-items .d-list {
+      padding-left: 1rem;
+      margin-top: 1rem;
+  }
+  .details-content p{
+    font-size: 14px;
+    margin: 10px;
+  }
+
+  .service-details-items .d-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+      font-size: 14px;
+      line-height: 1.4;
+      margin-bottom: 0.75rem;
+  }
+
+  .service-details-items .d-list li i {
+      margin-top: 4px;
+      font-size: 14px;
+      min-width: 16px;
+  }
+
+  /* Fix long texts in sidebar */
+  .main-sidebar .widget-categories ul li a {
+      font-size: 14px;
+      line-height: 1.4;
+      display: inline-block;
+      word-break: break-word;
+  }
+
+  /* Remove center tags in sidebar (fix spacing properly) */
+  .main-sidebar .widget-categories ul li a center {
+      display: block;
+      text-align: left;
+      margin: 0;
+  }
+}
+
+@media screen and (width: 360px) {
+  /* Adjust list inside service details */
+  .service-details-items .d-list {
+      padding-left: 1rem;
+      margin-top: 1rem;
+  }
+  .details-content p{
+    font-size: 14px;
+    margin: 10px;
+  }
+
+  .service-details-items .d-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+      font-size: 14px;
+      line-height: 1.4;
+      margin-bottom: 0.75rem;
+  }
+
+  .service-details-items .d-list li i {
+      margin-top: 4px;
+      font-size: 14px;
+      min-width: 16px;
+  }
+
+  /* Fix long texts in sidebar */
+  .main-sidebar .widget-categories ul li a {
+      font-size: 14px;
+      line-height: 1.4;
+      display: inline-block;
+      word-break: break-word;
+  }
+
+  /* Remove center tags in sidebar (fix spacing properly) */
+  .main-sidebar .widget-categories ul li a center {
+      display: block;
+      text-align: left;
+      margin: 0;
+  }
+}
+@media screen and (width: 344px) {
+  /* Adjust list inside service details */
+  .service-details-items .d-list {
+      padding-left: 1rem;
+      margin-top: 1rem;
+  }
+  .details-content p{
+    font-size: 14px;
+    margin: 10px;
+  }
+
+  .service-details-items .d-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+      font-size: 14px;
+      line-height: 1.4;
+      margin-bottom: 0.75rem;
+  }
+
+  .service-details-items .d-list li i {
+      margin-top: 4px;
+      font-size: 14px;
+      min-width: 16px;
+  }
+
+  /* Fix long texts in sidebar */
+  .main-sidebar .widget-categories ul li a {
+      font-size: 14px;
+      line-height: 1.4;
+      display: inline-block;
+      word-break: break-word;
+  }
+
+  /* Remove center tags in sidebar (fix spacing properly) */
+  .main-sidebar .widget-categories ul li a center {
+      display: block;
+      text-align: left;
+      margin: 0;
+  }
+}
+@media screen and (width: 540px) {
+  /* Adjust list inside service details */
+  .service-details-items .d-list {
+      padding-left: 1rem;
+      margin-top: 1rem;
+  }
+  .details-content p{
+    font-size: 14px;
+    margin: 10px;
+  }
+
+  .service-details-items .d-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+      font-size: 14px;
+      line-height: 1.4;
+      margin-bottom: 0.75rem;
+  }
+
+  .service-details-items .d-list li i {
+      margin-top: 4px;
+      font-size: 14px;
+      min-width: 16px;
+  }
+
+  /* Fix long texts in sidebar */
+  .main-sidebar .widget-categories ul li a {
+      font-size: 14px;
+      line-height: 1.4;
+      display: inline-block;
+      word-break: break-word;
+  }
+
+  /* Remove center tags in sidebar (fix spacing properly) */
+  .main-sidebar .widget-categories ul li a center {
+      display: block;
+      text-align: left;
+      margin: 0;
+  }
+}
+
+@media (max-width: 820px) {
+  .single-sidebar-widget .widget-categories ul li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+      margin-bottom: 0.75rem;
+     
+  }
+
+  .single-sidebar-widget .widget-categories ul li i {
+      margin-top: 4px;
+      font-size: 16px;
+      color: #333;
+  }
+
+  .single-sidebar-widget .widget-categories ul li a {
+      font-size: 15px;
+      line-height: 1.4;
+      word-break: break-word;
+      display: inline-block;
+      text-align: left;
+      
+  }
+
+  /* Remove center alignment visually */
+  .single-sidebar-widget .widget-categories ul li a center {
+      all: unset; /* resets the <center> tag styles */
+      display: block;
+      text-align: left;
+      width:100%;
+  }
+}
+@media (max-width: 912px) {
+  .single-sidebar-widget .widget-categories ul li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+      margin-bottom: 0.75rem;
+     
+  }
+
+  .single-sidebar-widget .widget-categories ul li i {
+      margin-top: 4px;
+      font-size: 16px;
+      color: #333;
+  }
+
+  .single-sidebar-widget .widget-categories ul li a {
+      font-size: 15px;
+      line-height: 1.4;
+      word-break: break-word;
+      display: inline-block;
+      text-align: left;
+      
+  }
+
+  /* Remove center alignment visually */
+  .single-sidebar-widget .widget-categories ul li a center {
+      all: unset; /* resets the <center> tag styles */
+      display: block;
+      text-align: left;
+      width:100%;
+  }
+}
+
+@media screen and (max-width: 414px) {
+.about-content p{
+  font-size: 14px;
+  margin: 10px;
+
+}
+}
+
+@media screen and (max-width: 375px) {
+  .about-content p{
+    font-size: 14px;
+    margin: 10px;
+  
+  }
+  }
+  @media screen and (max-width: 430px) {
+    .about-content p{
+      font-size: 14px;
+      margin: 10px;
+    
+    }
+    }
+
+    @media screen and (max-width: 540px) {
+      .about-content p{
+        font-size: 14px;
+        margin: 10px;
+      
+      }
+      }
+
+
+      @media (max-width: 1024px) {
+        .contact-info-wrapper .row {
+            display: flex;
+            flex-direction: column;
+        }
+    
+        .contact-info-wrapper .col-xl-6,
+        .contact-info-wrapper .col-lg-6 {
+            width: 100% !important;
+            max-width: 100%;
+            padding: 15px;
+        }
+    
+        .google-map iframe {
+            width: 100% !important;
+            height: 350px; /* You can adjust height as needed */
+        }
+    
+        .contact-info-content {
+            padding: 20px 10px;
+            text-align: left;
+        }
+    
+        .contact-info-items {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding-bottom: 20px;
+        }
+    
+        .contact-info-items .icon {
+            flex-shrink: 0;
+            font-size: 20px;
+            color: #333;
+            margin-top: 5px;
+        }
+    
+        .contact-info-items .content h3,
+        .contact-info-items .content h6 {
+            margin: 0;
+        }
+    
+        .contact-info-items .content a {
+            word-break: break-word;
+            display: inline-block;
+        }
+    }
+    @media (width: 375px) {
+      .contact-wrapper-3 {
+        background: none !important;         /* Removes image */
+        background-color: #ffffff !important; /* Optional: sets a plain white bg */
+      }
+    }
+    
+    @media (width: 414px) {
+      .contact-wrapper-3 {
+        background: none !important;         /* Removes image */
+        background-color: #ffffff !important; /* Optional: sets a plain white bg */
+      }
+    }
+    
+    @media (width: 430px) {
+      .contact-wrapper-3 {
+        background: none !important;         /* Removes image */
+        background-color: #ffffff !important; /* Optional: sets a plain white bg */
+      }
+    }
+    @media (width: 390px) {
+      .contact-wrapper-3 {
+        background: none !important;         /* Removes image */
+        background-color: #ffffff !important; /* Optional: sets a plain white bg */
+      }
+    }
+    @media (width: 412px) {
+      .contact-wrapper-3 {
+        background: none !important;         /* Removes image */
+        background-color: #ffffff !important; /* Optional: sets a plain white bg */
+      }
+    }
+    @media (width: 360px) {
+      .contact-wrapper-3 {
+        background: none !important;         /* Removes image */
+        background-color: #ffffff !important; /* Optional: sets a plain white bg */
+      }
+    }
+    @media (width: 768px) {
+      .contact-wrapper-3 {
+        background: none !important;         /* Removes image */
+        background-color: #ffffff !important; /* Optional: sets a plain white bg */
+      }
+    }
+    @media (width: 820px) {
+      .contact-wrapper-3 {
+        background: none !important;         /* Removes image */
+        background-color: #ffffff !important; /* Optional: sets a plain white bg */
+      }
+    }
+    @media (width: 912px) {
+      .contact-wrapper-3 {
+        background: none !important;         /* Removes image */
+        background-color: #ffffff !important; /* Optional: sets a plain white bg */
+      }
+    }
+    @media (width: 540px) {
+      .contact-wrapper-3 {
+        background: none !important;         /* Removes image */
+        background-color: #ffffff !important; /* Optional: sets a plain white bg */
+      }
+    }
+    @media (width: 344px) {
+      .contact-wrapper-3 {
+        background: none !important;         /* Removes image */
+        background-color: #ffffff !important; /* Optional: sets a plain white bg */
+      }
+    }
+    @media (width: 853px) {
+      .contact-wrapper-3 {
+        background: none !important;         /* Removes image */
+        background-color: #ffffff !important; /* Optional: sets a plain white bg */
+      }
+    }
